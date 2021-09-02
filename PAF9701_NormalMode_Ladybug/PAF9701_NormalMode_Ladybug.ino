@@ -1,5 +1,5 @@
 /* 
-   PAF9701 8 x 8 pixel thermal sensor
+   PAF9701 8 x 8 pixel low-power IR thermal sensor
    Copyright2 2021 Tlera Corporation
 
    PixArt Imaging's 8 x 8 pixel IR thermal imaging sensor offers wide (60 deg) field of view, 
