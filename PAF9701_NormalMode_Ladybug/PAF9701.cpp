@@ -67,8 +67,8 @@ void PAF9701::coldReset()
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_POWER_SAVING_MODE, temp & ~(0x10) ); // disable auto power save mode
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_OPERATION_MODE, runMode);  // select runMode
   
-  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_L,  sampleRate & 0xFF);  // select sample rate
-  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_M, (sampleRate >> 8) & 0xFF);  // select sample rate
+  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_L,  sampleRate & 0xFF);         // select sample rate
+  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_M, (sampleRate >> 8) & 0xFF);   // select sample rate
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_H, (sampleRate >> 16) & 0x0F);  // select sample rate
   
   temp = _i2c_bus->readByte(PAF9701_ADDRESS, PAF9701_POWER_SAVING_MODE);
@@ -85,7 +85,6 @@ void PAF9701::coldReset()
   void PAF9701::suspendOperation()
  {
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BANK_SELECT, 0x00);       // select Bank 0
-  // software reset the PAF9701, preserve register settings
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_OUTPUT_ENABLE, 0x00); 
  }
 
@@ -93,7 +92,6 @@ void PAF9701::coldReset()
   void PAF9701::resumeOperation()
  {
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BANK_SELECT, 0x00);       // select Bank 0
-  // software reset the PAF9701, preserve register settings
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_OUTPUT_ENABLE, 0x01); 
  }
 
@@ -101,15 +99,13 @@ void PAF9701::coldReset()
   void PAF9701::clearInterrupt()
  {
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BANK_SELECT, 0x00);       // select Bank 0
-  // software reset the PAF9701, preserve register settings
-  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_STATUS_FLAG, 0x80);  // clear Frame_Update_flag
+  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_STATUS_FLAG, 0x80);       // clear Frame_Update_flag
  }
 
 
   uint8_t PAF9701::getStatus()
  {
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BANK_SELECT, 0x00);       // select Bank 0
-  // software reset the PAF9701, preserve register settings
   uint8_t temp = _i2c_bus->readByte(PAF9701_ADDRESS, PAF9701_STATUS_FLAG);  // read status register
   return temp;
  }
