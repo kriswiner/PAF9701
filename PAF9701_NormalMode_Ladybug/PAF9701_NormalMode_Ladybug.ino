@@ -6,9 +6,9 @@
    low-power (2 mA) normal mode current usage, wide (-20 to 380 C) object temperature range, 
    and accurate (+/- 1 degree C) 16-bit object temperatures.
 
-   The sketch demonstrates how to cinitialize the PAF9701 in normal run mode, configure the
+   The sketch demonstrates how to initialize the PAF9701 in normal run mode, configure the
    data filters and image orientation, set up the data ready interrupt, read the data and plot 
-   the properly scaled data on the serial monitor and on a 160 x 128 pixel Adafruit  TFT color display.
+   the properly scaled data on the serial monitor and on a 160 x 128 pixel Adafruit TFT color display.
 
    The sketch is intended to run using a Tlera Corporation STM32L432 Ladybug development board but just about
    any 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
