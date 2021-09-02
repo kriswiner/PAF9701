@@ -2,9 +2,9 @@
    PAF9701 8 x 8 pixel thermal sensor
    Copyright2 2021 Tlera Corporation
 
-   PixArt Imaging's 8 x 8 pixel IR thermal imaging sensor
-   60 deg field of view, 2 mA normal mode current, -20 to 380 C object
-   temperature range, 16-bit object temperatures to +/- 1 degree accuracy or better.
+   PixArt Imaging's 8 x 8 pixel IR thermal imaging sensor offers wide (60 deg) field of view, 
+   low-power (2 mA) normal mode current usage, wide (-20 to 380 C) object temperature range, 
+   and accurate (+/- 1 degree C) 16-bit object temperatures.
 
    The sketch demonstrates how to cinitialize the PAF9701 in normal run mode, configure the
    data filters and image orientation, set up the data ready interrupt, read the data and plot 
