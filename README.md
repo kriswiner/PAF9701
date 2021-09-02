@@ -1,11 +1,11 @@
 # PAF9701
-Arduino sketches for PixArt Imaging's 8 x 8 pixel IR thermal imaging camera
+Arduino sketches for PixArt Imaging's 8 x 8 pixel low-power IR thermal imaging camera
 
 ![image](https://user-images.githubusercontent.com/6698410/131921078-3c8f8538-b9d3-4090-8422-59423026ff9d.jpg)
 
 *Adafruit 160 x 128 pixel TFT color display showing thermal image of my hand above the PAF9701 sensor breakout board.*
 
-PixArt Imaging's 8 x 8 pixel IR thermal imaging sensor offers wide (60 deg) field of view, low-power (2 mA) normal mode current usage, wide (-20 to 380 C) object temperature range, and accurate (+/- 1 degree C) 16-bit object temperatures.
+PixArt Imaging's 8 x 8 pixel low-power IR thermal imaging sensor offers wide (60 deg) field of view, low-power (2 mA) normal mode current usage, wide (-20 to 380 C) object temperature range, and accurate (+/- 1 degree C) 16-bit object temperatures.
 
 The NormalMode sketch demonstrates how to initialize the PAF9701 image sensor in normal run mode, configure the data filters and image orientation, set up the data ready interrupt, read the data and plot the properly scaled data on the serial monitor and on a 160 x 128 pixel Adafruit TFT color display.
 
