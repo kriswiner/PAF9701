@@ -11,7 +11,7 @@ The NormalMode sketch demonstrates how to initialize the PAF9701 image sensor in
 
 I will be adding sketches demonstrating auto low power modes and selecting different pixel patterns as well as interrupting on absolute and differential thresholds, etc. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
 
-The sketches are intended to run using a Tlera Corporation STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board but just about and 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
+The sketches are intended to run using a Tlera Corporation STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board but just about any 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
 
 These sketches may be used without limitations with proper attribution
 
