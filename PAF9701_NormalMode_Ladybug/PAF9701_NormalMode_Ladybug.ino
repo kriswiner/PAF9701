@@ -1,6 +1,6 @@
 /* 
    PAF9701 8 x 8 pixel low-power IR thermal sensor
-   Copyright2 2021 Tlera Corporation
+   Copyright 2021 Tlera Corporation
 
    PixArt Imaging's 8 x 8 pixel IR thermal imaging sensor offers wide (60 deg) field of view, 
    low-power (2 mA) normal mode current usage, wide (-20 to 380 C) object temperature range, 
