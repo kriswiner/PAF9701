@@ -15,4 +15,4 @@ The sketches are intended to run using a Tlera Corporation STM32L432 [Ladybug](h
 
 These sketches may be used without limitations with proper attribution
 
-PAF9701 breakout [design](https://oshpark.com/shared_projects/jREzx9Yg) may be obtained in the shared space of OSHPark. Ask PixArtImaging for information on sampling the PAF9701 thermal imaging sensor.
+PAF9701 breakout [design](https://oshpark.com/shared_projects/jREzx9Yg) may be obtained in the shared space of OSHPark. Ask PixArt Imaging for information on sampling the PAF9701 thermal imaging sensor.
