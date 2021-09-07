@@ -187,8 +187,7 @@
 #define PAF9701_P2_WOI_H                   0x51
 #define PAF9701_SKIP_MODE                  0x52
 
-// Bank 5
-
+// Bank 
 #define PAF9701_TO_PIXEL_32_DATA_L         0x00
 #define PAF9701_TO_PIXEL_32_DATA_H         0x01
 #define PAF9701_TO_PIXEL_33_DATA_L         0x02
