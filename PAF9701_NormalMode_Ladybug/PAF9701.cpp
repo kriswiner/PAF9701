@@ -44,7 +44,7 @@ void PAF9701::coldReset()
  }
 
 
-  void PAF9701::init(uint8_t runMode, uint32_t sampleRate, bool settle_en)
+  void PAF9701::initNormalMode(uint8_t runMode, uint32_t sampleRate, bool settle_en)
  {
   // initialize sensor to default values per 7.1.2 of the data sheet
   _i2c_bus->writeByte(PAF9701_ADDRESS, 0x7F, 0x00);  // select Bank 0
@@ -66,9 +66,10 @@ void PAF9701::coldReset()
   uint8_t temp = _i2c_bus->readByte(PAF9701_ADDRESS, PAF9701_POWER_SAVING_MODE);
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_POWER_SAVING_MODE, temp & ~(0x10) ); // disable auto power save mode
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_OPERATION_MODE, runMode);  // select runMode
+  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_ONE_SHOT_MODE, 0x00);  // disable one-shot mode
   
-  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_L,  sampleRate & 0xFF);         // select sample rate
-  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_M, (sampleRate >> 8) & 0xFF);   // select sample rate
+  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_L,  sampleRate & 0xFF);  // select sample rate
+  _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_M, (sampleRate >> 8) & 0xFF);  // select sample rate
   _i2c_bus->writeByte(PAF9701_ADDRESS, PAF9701_BURST_FRQ_SEL_H, (sampleRate >> 16) & 0x0F);  // select sample rate
   
   temp = _i2c_bus->readByte(PAF9701_ADDRESS, PAF9701_POWER_SAVING_MODE);
