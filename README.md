@@ -13,7 +13,7 @@ The **autoPowerSaveMode** sketch demonstrates how to take advantage of the built
 
 Normal run mode operation (2 mA) transitions to detectMode1 (310 uA) after a user specified delay time (60 seconds in the sketch) without an alert. In detectMode1, the sensor checks for an alert condition every 20 seconds. If there is no alert condition observed within the delay time in DetectMode 1 the sensor drops down into detectMode2 (52 uA), where the sensor checks for an alert every 120 seconds. Once an alert condition is detected the sensor returns to normal run mode and the process starts over again.
 
-So the power usage drops by factors of ~6-7 at each stage and the latency increases by about the same amount. This provides a way for the user to manage power usage that is very convenient and effective, and offers enough flexibility that the power usage and latency can be tailored to the specific application without elaborate host control.
+So the power usage drops by factors of ~6-7 at each stage and the latency increases by about the same amount. This provides a way for the user to manage power usage that is very convenient and effective, and offers enough flexibility that the power usage and latency can be tailored to the specific application without elaborate host programming.
 
 I will be adding sketches selecting different pixel patterns as well as using this sensor for people/transit detection, etc. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
 
