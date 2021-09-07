@@ -61,12 +61,12 @@
 #define PAF9701_FILTER_SEL                 0x50
 
 #define PAF9701_TA_HIGH_LIMIT_L            0x52
-#define PAF9701_TA_HIGH_LIMIT_L            0x53
-#define PAF9701_TA_LOW_LIMIT_H             0x54
+#define PAF9701_TA_HIGH_LIMIT_H            0x53
+#define PAF9701_TA_LOW_LIMIT_L             0x54
 #define PAF9701_TA_LOW_LIMIT_H             0x55
 #define PAF9701_TO_HIGH_LIMIT_L            0x56
-#define PAF9701_TO_HIGH_LIMIT_L            0x57
-#define PAF9701_TO_LOW_LIMIT_H             0x58
+#define PAF9701_TO_HIGH_LIMIT_H            0x57
+#define PAF9701_TO_LOW_LIMIT_L             0x58
 #define PAF9701_TO_LOW_LIMIT_H             0x59
 #define PAF9701_TA_HYSTERESIS              0x5A
 #define PAF9701_TO_HYSTERESIS              0x5B
@@ -83,7 +83,7 @@
 #define PAF9701_DET_TO_HYSTERESIS          0x65
 
 #define PAF9701_TO_PIXEL_THRESHOLD         0x67
-#define PAF9701_TO_DET_PIXEL_THRESHOLD     0x68
+#define PAF9701_DET_TO_PIXEL_THRESHOLD     0x68
 #define PAF9701_TO_SKIP1_PIXEL_THRESHOLD   0x69
 #define PAF9701_TO_SKIP2_PIXEL_THRESHOLD   0x6A
 
