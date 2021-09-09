@@ -17,10 +17,12 @@ So the power usage drops by factors of ~6-7 at each stage and the latency increa
 
 The **GestureDetection** sketch demonstrates how to initialize the PAF9701 in normal run mode, configure the temperature limit thresholds and hystereses, configure and report the alert flags, read the data and plot the properly scaled data on the serial monitor and on a 160 x 128 pixel Adafruit TFT color display.  The sketch keeps track of the pixels that exceed the temperature threshold conditions specified by the user, calculates the centroid of the pixels with 1 pixel resolution, and then compares successive centroids to recognize hand gestures like swipe left, swipe up, etc. This could be useful, for example, for touchless control applications.
 
-I will be adding sketches selecting different pixel patterns, etc. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
+This fairly primitive capability could easily be extended to detect and count people and/or animal transits across the field of view, keeping track of movements into or out of a space, etc. It could also be used to classify and track more sophisticated individual limb and hand motions.
+
+I will be adding sketches as i develop new applications. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
 
 The sketches are intended to run using a Tlera Corporation STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board but just about any 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
 
-These sketches may be used without limitations with proper attribution
+These sketches may be used without limitations with proper attribution.
 
 The 18 mm x 10 mm breadboard-compatible PAF9701 breakout [design](https://oshpark.com/shared_projects/jREzx9Yg) may be obtained in the shared space of OSHPark. Ask PixArt Imaging for information on sampling the PAF9701 thermal imaging sensor.
