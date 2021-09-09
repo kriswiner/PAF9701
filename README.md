@@ -15,7 +15,9 @@ Normal run mode operation (2 mA) transitions to detectMode1 (310 uA) after a use
 
 So the power usage drops by factors of ~6-7 at each stage and the latency increases by about the same amount. This provides a way for the user to manage power usage that is very convenient and effective, and offers enough flexibility that the power usage and latency can be tailored to the specific application without elaborate host programming.
 
-I will be adding sketches selecting different pixel patterns as well as using this sensor for people/transit detection, etc. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
+The **GestureDetection** sketch demonstrates how to initialize the PAF9701 in normal run mode, configure the temperature limit thresholds and hystereses, configure and report the alert flags, read the data and plot the properly scaled data on the serial monitor and on a 160 x 128 pixel Adafruit TFT color display.  The sketch keeps track of the pixels that exceed the temperature threshold conditions specified by the user, calculates the centroid of the pixels with 1 pixel resolution, and then compares successive centroids to recognize hand gestures like swipe left, swipe up, etc. This could be useful, for example, for touchless control applications.
+
+I will be adding sketches selecting different pixel patterns, etc. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
 
 The sketches are intended to run using a Tlera Corporation STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board but just about any 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
 
