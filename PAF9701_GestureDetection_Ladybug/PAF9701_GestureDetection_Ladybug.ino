@@ -13,9 +13,10 @@
    centroid of the pixels with 1 pixel resolution, and then compares successive centroids to recognize hand gestures
    swipe left, swipe up, etc. This could be useful, for example, for touchless control applications.
    
-   This fairly primitive capability could easily be extended to detect people and/or
-   animal transits across the field of view, keeping track of movements into or out of a space, etc. It could also be used to 
-   classify and track more sophisticated individual limb and hand motions.
+   This fairly primitive capability could also be used to track an object in the field of view. It can be
+   easily extended to detect people and/or animal transits across the field of view, keeping track of movements 
+   into or out of a space, etc. It could also be used to classify and track more sophisticated individual limb and 
+   hand motions.
 
    The sketch is intended to run using a Tlera Corporation STM32L432 Ladybug development board but just about
    any 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
@@ -296,7 +297,7 @@ void loop()
     tft.setTextColor(WHITE);
     
     if((centroidX != 0)  &&  (centroidY != 0) ) { // show centroid of alert pixels on the display as white X
-    tft.setCursor(centroidX*16, (128 - centroidY*16)); tft.print("X"); // write symbol on centroid location
+    tft.setCursor((centroidX + 1)*16, (160 - (centroidY + 1)*16)); tft.print("X"); // write symbol on centroid location, reverse Y screen direction
     }
     
     tft.setCursor(32, 4 );                   // write min,max temperature on non-data patch
