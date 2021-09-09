@@ -17,7 +17,7 @@ So the power usage drops by factors of ~6-7 at each stage and the latency increa
 
 The **GestureDetection** sketch demonstrates how to initialize the PAF9701 in normal run mode, configure the temperature limit thresholds and hystereses, configure and report the alert flags, read the data and plot the properly scaled data on the serial monitor and on a 160 x 128 pixel Adafruit TFT color display.  The sketch keeps track of the pixels that exceed the temperature threshold conditions specified by the user, calculates the centroid of the pixels with 1 pixel resolution, and then compares successive centroids to recognize hand gestures like swipe left, swipe up, etc. This could be useful, for example, for touchless control applications.
 
-This fairly primitive capability could easily be extended to detect and count people and/or animal transits across the field of view, keeping track of movements into or out of a space, etc. It could also be used to classify and track more sophisticated individual limb and hand motions.
+This fairly primitive capability could easily be extended to detect and count people and/or animal transits across the field of view, track movements into or out of a space, etc. It could also be used to classify and track more sophisticated individual limb and hand motions.
 
 I will be adding sketches as new applications are developed. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
 
