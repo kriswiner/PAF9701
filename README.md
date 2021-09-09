@@ -19,7 +19,7 @@ The **GestureDetection** sketch demonstrates how to initialize the PAF9701 in no
 
 This fairly primitive capability could easily be extended to detect and count people and/or animal transits across the field of view, keeping track of movements into or out of a space, etc. It could also be used to classify and track more sophisticated individual limb and hand motions.
 
-I will be adding sketches as i develop new applications. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
+I will be adding sketches as new applications are developed. This sensor can do quite a lot; more than can be reasonably demonstrated in one simple sketch.
 
 The sketches are intended to run using a Tlera Corporation STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board but just about any 3V3 dev board with an SPI port (for the display) and I2C port (for the PAF9701) will do.
 
