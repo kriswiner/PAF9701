@@ -297,7 +297,7 @@ void loop()
     tft.setTextColor(WHITE);
     
     if((centroidX != 0)  &&  (centroidY != 0) ) { // show centroid of alert pixels on the display as white X
-    tft.setCursor((centroidX + 1)*16, (160 - (centroidY + 1)*16)); tft.print("X"); // write symbol on centroid location, reverse Y screen direction
+    tft.setCursor((centroidX + 0.5)*16, (160 - (centroidY + 0.5)*16)); tft.print("X"); // write symbol on centroid location, reverse Y screen direction
     }
     
     tft.setCursor(32, 4 );                   // write min,max temperature on non-data patch
