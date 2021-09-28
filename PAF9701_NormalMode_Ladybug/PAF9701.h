@@ -308,7 +308,7 @@ class PAF9701
   uint16_t getChipID();
   void coldReset(); // reset all registers to default
   void warmReset(); // preserve register settings
-  void init(uint8_t runMode, uint32_t sampleRate, bool settle_en);
+  void initNormalMode(uint8_t runMode, uint32_t sampleRate, bool settle_en);
   void suspendOperation();
   void resumeOperation();
   void clearInterrupt();
