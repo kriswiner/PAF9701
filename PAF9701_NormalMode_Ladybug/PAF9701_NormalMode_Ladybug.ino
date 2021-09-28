@@ -148,7 +148,7 @@ void setup()
       
    while( !(PAF9701.getStatus() & 0x20) ) {}       // wait for flash bootload to complete
    Serial.println("Flash Bootload done!"); Serial.println(" ");
-   PAF9701.init(runMode, sampleRate, settle_en);  // select sensor run mode
+   PAF9701.initNormalMode(runMode, sampleRate, settle_en);  // select sensor run mode
    Serial.print("Sample rate = 0x"); Serial.println(sampleRate, HEX); Serial.println(" ");
    temp = PAF9701.getPowerSaveMode();
    Serial.print("power save mode register = 0x"); Serial.println(temp, HEX); 
